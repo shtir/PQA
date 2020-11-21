@@ -3,7 +3,7 @@
 from pyModbusTCP.client import ModbusClient
 import datetime
 from influxdb import InfluxDBClient
-import env
+from env import *
 
 
 time = datetime.datetime.utcnow()
