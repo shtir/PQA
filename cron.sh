@@ -35,4 +35,12 @@ while true; do
  # sleep 2;
   python ~/PQA/w106.py 17 volt
  # sleep 2;
+  python ~/PQA/w106.py 18 volt
+ # sleep 2;
+  python ~/PQA/w106.py 19 volt
+ # sleep 2;
+  python ~/PQA/w106.py 20 volt
+ # sleep 2;
+  python ~/PQA/w106.py 21 volt
+ # sleep 2;  
 done
