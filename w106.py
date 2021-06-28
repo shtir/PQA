@@ -95,8 +95,12 @@ if ((len(sys.argv)) == 3):
     if (sys.argv[1] == "21"):
         ipAddress = "192.168.88.27"
         port = 8080
-        dbname = "Comp3" 
+        dbname = "Comp3"
 
+    if (sys.argv[1] == "22"):
+        ipAddress = "192.168.88.24"
+        port = 8080
+        dbname = "MPP"
 
 elif ((len(sys.argv)) == 5):
     ipAddress = sys.argv[1]
