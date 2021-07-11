@@ -161,7 +161,7 @@ class W106:
         c.unit_id(1)
         c.open()
         if (mode == "volt"):
-            voltAmper = c.read_input_registers(0, 50)
+            voltAmper = c.read_input_registers(0, 55)
             c.close()
             if voltAmper:
                 self.v1 = (voltAmper[0] << 16 | voltAmper[1])/10
@@ -183,13 +183,16 @@ class W106:
                 self.ptot = (voltAmper[44] << 16 | voltAmper[45])/10
                 self.qtot = (voltAmper[46] << 16 | voltAmper[47])/10
                 self.stot = (voltAmper[48] << 16 | voltAmper[49])/10
+                self.temperature= (voltAmper[54])/10
 
             else:
                 print("Read Volt And Amper ERROR")
 
         if (mode == "counter"):
             Counter = c.read_input_registers(70, 36)
-            #print(Counter)
+            print("Counter:")
+            print(dbname)
+            print(Counter)
             c.close()
             if Counter:
                 self.peakA1 = (Counter[0] << 32 |
@@ -246,6 +249,7 @@ if (mode == "volt"):
                 "Ptot": w106.ptot,
                 "Qtot": w106.qtot,
                 "Stot": w106.stot,
+                "Temperature": w106.temperature,
             }
         }
     ]
