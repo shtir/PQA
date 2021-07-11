@@ -3,3 +3,4 @@ backup.sh
 counter
 __pycache__
 .vscode
+test/
